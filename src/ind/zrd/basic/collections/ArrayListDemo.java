@@ -7,25 +7,26 @@ import java.util.List;
 /**
  * 
  * @author 11251
- *ArrayList ÊÇÊµÏÖList½Ó¿ÚµÄ¶¯Ì¬Êı×é£¬ËùÎ½¶¯Ì¬ÊÇÖ¸ËüµÄÈİÁ¿´óĞ¡ÊÇ¿É±äµÄ¡£
- *ArrayList µ×²ãÊÇÍ¨¹ıÊı×éÀ´ÊµÏÖµÄ£¬Ğí¶à²Ù×÷¶¼ÊÇÍ¨¹ıÊı×é+Êı×é¸´ÖÆÀ´ÊµÏÖµÄ£¨System.arraycoyp()·½·¨£©¡£
+ *ArrayList æ˜¯å®ç°Listæ¥å£çš„åŠ¨æ€æ•°ç»„ï¼Œæ‰€è°“åŠ¨æ€æ˜¯æŒ‡å®ƒçš„å®¹é‡å¤§å°æ˜¯å¯å˜çš„ã€‚
+ *ArrayList åº•å±‚æ˜¯é€šè¿‡æ•°ç»„æ¥å®ç°çš„ï¼Œè®¸å¤šæ“ä½œéƒ½æ˜¯é€šè¿‡æ•°ç»„+æ•°ç»„å¤åˆ¶æ¥å®ç°çš„ï¼ˆSystem.arraycoyp()æ–¹æ³•ï¼‰ã€‚
+ *ArrayList æ ¹æ®ä¸‹æ ‡è¿›è¡Œéšæœºè®¿é—®çš„é€Ÿåº¦æ˜¯å¾ˆå¿«çš„ã€‚
  */
 public class ArrayListDemo {
 	public static void main(String[] args) {
-		//ÎŞ²Î¹¹Ôìº¯Êı´´½¨ ArrayList
+		//æ— å‚æ„é€ å‡½æ•°åˆ›å»º ArrayList
 		ArrayList<Integer> al1 = new ArrayList<Integer>();
 		al1.add(1);
-		//ÒÔ¹Ì¶¨³õÊ¼ÈİÁ¿´´½¨ArrayList
+		//ä»¥å›ºå®šåˆå§‹å®¹é‡åˆ›å»ºArrayList
 		ArrayList<Integer> al2 = new ArrayList<Integer>(25);
 		al2.add(2);
 		System.out.println(al2.size());
-		//ÒÔÖ¸¶¨¼¯ºÏ´´½¨ArrayList,¸ÃlistÖÖ°üº¬´«Èë¼¯ºÏµÄËùÓĞÔªËØ£¬Ë³ĞòÎªµü´úÆ÷·µ»ØÔªËØµÄË³Ğò¡£
+		//ä»¥æŒ‡å®šé›†åˆåˆ›å»ºArrayList,è¯¥listç§åŒ…å«ä¼ å…¥é›†åˆçš„æ‰€æœ‰å…ƒç´ ï¼Œé¡ºåºä¸ºè¿­ä»£å™¨è¿”å›å…ƒç´ çš„é¡ºåºã€‚
 		ArrayList<Integer> al3 = new ArrayList<Integer>(new ArrayList<Integer>());
 		al3.add(3);
 		
-		//Array ListÊÇÏÖ³¡²»°²È«µÄ£¬µ«ÎÒÃÇ¿ÉÒÔÍ¨¹ıÆäËü·½Ê½´´½¨Ïß³Ì°²È«µÄlist.
+		//Array Listæ˜¯ç°åœºä¸å®‰å…¨çš„ï¼Œä½†æˆ‘ä»¬å¯ä»¥é€šè¿‡å…¶å®ƒæ–¹å¼åˆ›å»ºçº¿ç¨‹å®‰å…¨çš„list.
 		List<String> list = Collections.synchronizedList(new ArrayList<String>());
-		list.add("Ïß³ÌÍ¬²½µÄArrayList¡£");
+		list.add("çº¿ç¨‹åŒæ­¥çš„ArrayListã€‚");
 		
 		int[] array = {1,2,3,4,5,6,7,8,9,0,};
 		System.arraycopy(array, 5, array, 6, 4);
